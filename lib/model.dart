@@ -13,7 +13,7 @@ class NewTask {
 
 class MyState extends ChangeNotifier {
   late List<NewTask> _list = [];
-  int _filterBy = 3;
+  int _filterBy = 0;
 
   List<NewTask> get list => _list;
 

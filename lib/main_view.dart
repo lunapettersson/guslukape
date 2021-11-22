@@ -17,9 +17,9 @@ class MainView extends StatelessWidget {
                       .setFilterBy(value);
               },
               itemBuilder: (context) => [
-                    PopupMenuItem(child: Text('Alla uppgifter'), value: 1),
-                    PopupMenuItem(child: Text('Färdiga uppgifter'), value: 2),
-                    PopupMenuItem(child: Text('Ofärdiga uppgifter'), value: 3)
+                    PopupMenuItem(child: Text('Alla uppgifter'), value: 0),
+                    PopupMenuItem(child: Text('Färdiga uppgifter'), value: 1),
+                    PopupMenuItem(child: Text('Ofärdiga uppgifter'), value: 2)
                   ]),
         ],
       ),
@@ -43,10 +43,10 @@ class MainView extends StatelessWidget {
   }
 
   List<NewTask> _filterList(list, value) {
-    if (value == 1) return list;
-    if (value == 2)
+    if (value == 0) return list;
+    if (value == 1)
       return list.where((task) => task.isCompleted == true).toList();
-    else if (value == 3)
+    else if (value == 2)
       return list.where((task) => task.isCompleted == false).toList();
 
     return list;

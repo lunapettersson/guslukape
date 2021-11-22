@@ -4,7 +4,7 @@ import './model.dart';
 class AddNewTaskView extends StatefulWidget {
   final NewTask task;
 
-  AddNewTaskView(this.task);
+  const AddNewTaskView(this.task);
 
   @override
   State<StatefulWidget> createState() {
